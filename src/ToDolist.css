@@ -1,0 +1,83 @@
+*{
+    box-sizing: 0;
+    padding: 0;
+    margin : 0;
+}
+body {
+    font-family: poppins;
+}
+.main-div {
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(231, 8, 8, 0.486) ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+} 
+.center-div {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7px 5px 24px rgba(0, 0, 0, 0.493);
+    width: 25%;
+    height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    
+      
+}
+.center-div h1 {
+    background-color: rgba(231, 8, 8, 0.486);
+    margin: 20px  0px;
+}
+.center-div input{
+    border: 0 !important;
+    border-bottom: 3px solid rgba(231, 8, 8, 0.486) !important;
+    background-color: transparent;
+    width: 50%;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.center-div input:focus {
+  outline: none;
+}
+.center-div i {
+    margin: 0px 10px;
+    color:rgba(231, 8, 8, 0.486);
+    font-size: 30px;
+    
+}
+.center-div i:hover {
+    color: rgba(231, 8, 8, 0.486);
+}
+
+.center-div li {
+    text-align: left;
+    list-style: none;
+   
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 20px;
+    font-weight: 500;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 18px;
+}
+.todocomp {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: left;
+    justify-content: left;
+    margin-left: 10px; 
+}
+.todocomp i {
+    font-size: 20px;
+    margin: 3px 8px;
+    color:rgba(231, 8, 8, 0.486)
+}
+.todocomp i:hover{
+    color: red;
+}

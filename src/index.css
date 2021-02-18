@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box
+}
+div .dt {
+  background-color: brown;
+  padding: 100px;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div h1 {
+  text-align: center;
+  
+  /* background-color:rgb(255, 0, 255);
+  padding: 20px;
+  color: aliceblue;
+  margin-top: 15%;
+  margin-left: 25%;
+  border-radius: 20%;
+  width: 50%; */
 }
+.img {
+ flex-direction: column;
+}
+.img img {
+  justify-content: end;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  height: auto;
+  width: 300px;
+}
+
+.cardbody {
+  margin: 20px;
+  border: 1px solid black;
+ width: 50vh;
+}
+.cardbody:hover{
+  box-shadow: black;
+}
+.cardbody h2 {
+  text-align: center;
+}
+.cardbody button {
+ 
+  margin: 20px;
+ 
+}
+.zero   {
+   height: 100vh;
+   width: 100%;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .zero button {
+   padding: 12px 20px;
+  background-color: blue;
+  cursor: pointer;
+ }
+ .forms {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: blueviolet;
+
+  align-items: center;
+ }
+ .forms input {
+   text-align: center;
+   margin: 20px 0px;
+   font-size: 20px;
+ }
+ .forms button {
+  text-align: center;
+  margin-left: 40%;
+  font-size: 20px;
+  padding: 7px;
+  background-color: black;
+  color: white;
+ }
