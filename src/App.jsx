@@ -69,6 +69,7 @@ return (
        value={addItem}
        />
       <i class="fas fa-plus-circle" on onClick={PrintItemF}></i>
+      <button>delete</button>
       <ol>
         {  
         printItem.length > 0 ? printItem.map((val , index) => {
