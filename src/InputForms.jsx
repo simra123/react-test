@@ -1,7 +1,14 @@
+import { hasData } from 'jquery';
 import React , {useState} from 'react';
+import { useParams , useLocation , useHistory } from 'react-router';
 
 
 const InputForms = () => {
+  const location = useLocation()
+  const history = useHistory()
+
+  // const { name } = useParams();
+
     const [fullName , getFullName] = useState({
       fname : '',
       lname : '',
@@ -10,6 +17,7 @@ const InputForms = () => {
     });
   
     const [printAll , getAll] = useState({})
+    
   
     const inEvent = (lol) => {
      
@@ -17,14 +25,14 @@ const InputForms = () => {
       // console.log(lol.target.name)
       // const value = lol.target.value
       // const name = lol.target.name
-      const {name , value } = lol.target
-      console.log(lol.target)
+       let {name , value } = lol.target
+      console.log(value)
    
       getFullName((hehe)=>{
-        console.log(hehe)
+       
         return{
           ...hehe ,
-          name : value,
+          [name] : value,
         }
       //   if(name == "fname"){
       //    return{
@@ -60,13 +68,18 @@ const InputForms = () => {
     } 
     const getName = (e)=> {
      e.preventDefault();
-     getAll(fullName)
+     getAll(fullName);
+     getFullName("")
     }
+
   
    return (
-          <div className="forms"> 
+         
+          <div className="forms">
+            
+          {/* <button onClick={()=> history.goBack()} > go back </button> */}
           <form onSubmit={getName}>
-          <h1 > hello {printAll.fname} {printAll.lname}</h1>
+          <h1 > hello  {printAll.fname} {printAll.lname}</h1>
           <h4 style={{textAlign:"center"}}> {printAll.email} </h4>
           <p style={{textAlign:"center"}}> {printAll.mobNum} </p>
           <input 
@@ -75,11 +88,12 @@ const InputForms = () => {
            name="fname"
            onChange={inEvent}
            value={fullName.fname}
+           
           />
   
           <br/>
   
-          <input 
+          <input         
            type="text"
            placeholder="enter your last name"
            name="lname"
