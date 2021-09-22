@@ -19,6 +19,7 @@ import axios from 'axios';
 import PokemonAxios from "./PokemonAxios";
 import GoogleKF from "./GoogleKF";
 import Error from "./Error";
+import OTP from './OTP';
 import {BrowserRouter, Route , Switch , useLocation , Redirect} from "react-router-dom";
 
 
@@ -37,6 +38,7 @@ const App = () => {
       <Route path='/poke' render={() => 
         <PokemonAxios move='KAARTAB' />} />
       <Route path='/todolist' component={ToDolist} />
+      <Route path='/otp' component={OTP} />
       <Route path='/clock' component={Clock} />
       <Route path='/currdate' component={Currdate} />
       <Route path='/changebg' component={Changebg} />
@@ -48,7 +50,6 @@ const App = () => {
       {/* <Route component={Error}/> */}
       <Redirect to="/" />
     </Switch>
-    <button className="btn btn-outline-success"> donor click </button>
    </>
  )
 }
