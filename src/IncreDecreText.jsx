@@ -1,4 +1,7 @@
-import eact from 'react';
+import react , {useState , useEffect} from 'react';
+
+import AddIcon from '@material-ui/icons/Add';
+
 
 const IncreDecreTest = () => {
     let  [IncreDecre , setIncreDecre] = useState(0)
@@ -34,9 +37,9 @@ const IncreDecreTest = () => {
       <h2>{IncreDecre}</h2>
       <div style={{dispaly : "inline-block"}}>
         <button onClick={plus1}><AddIcon/></button>
-        <button onClick={minus1}><RemoveIcon/></button>
+        <button onClick={minus1}>uju</button>
       </div>
-      <Clock/>
+      
     </div>
   
   )

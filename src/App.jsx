@@ -6,6 +6,7 @@ import Currdate from './Currdate';
 import Changebg from "./Changebg";
 import {db} from './fire';
 import Clock from 'react-digital-clock';
+import IncreDecreTest from './IncreDecreText';
 import UseState from './UseState';
 import Search from './Search';
 import Inputforms from './InputForms';
@@ -19,6 +20,7 @@ import axios from 'axios';
 import PokemonAxios from "./PokemonAxios";
 import GoogleKF from "./GoogleKF";
 import Error from "./Error";
+import Toast from './Toast'
 import OTP from './OTP';
 import {BrowserRouter, Route , Switch , useLocation , Redirect} from "react-router-dom";
 
@@ -47,6 +49,8 @@ const App = () => {
       <Route path='/sloth' component={SlothM} />
       <Route path='/cards' component={NetflixList} />
       <Route path='/search' component={Search} />
+      <Route path='/bleh' component={IncreDecreTest} />
+      <Route path='/toast' component={Toast} />
       {/* <Route component={Error}/> */}
       <Redirect to="/" />
     </Switch>
